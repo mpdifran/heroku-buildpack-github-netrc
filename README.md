@@ -21,7 +21,7 @@ Requirements
 You'll need to make a GitHub authorization token. Here's the `curl` command you can use.
 
 ```console
-$ curl -u 'my-read-only-user' -d '{"scopes":["repo"],"note":"GITHUB_AUTH_TOKEN for Heroku deplyoments","note_url":"https://github.com/timshadel/heroku-buildpack-github-netrc"}' https://api.github.com/authorizations  # GitHub API call
+$ curl -u 'my-read-only-user' -d '{"scopes":["repo"],"note":"GITHUB_AUTH_TOKEN for Heroku deplyoments","note_url":"https://github.com/mpdifran/heroku-buildpack-github-netrc"}' https://api.github.com/authorizations  # GitHub API call
 Enter host password for user 'username':  [type password]
 
 {
@@ -35,7 +35,7 @@ Enter host password for user 'username':  [type password]
   },
   "url": "https://api.github.com/authorizations/123456",
   "note": "GITHUB_AUTH_TOKEN for Heroku deployments.",
-  "note_url": "https://github.com/timshadel/heroku-buildpack-github-netrc",
+  "note_url": "https://github.com/mpdifran/heroku-buildpack-github-netrc",
   "id": 123456,
 }
 ```
@@ -60,7 +60,7 @@ If this does not output an existing buildpack, follow the instructions at https:
 
 Next, prepend this buildpack to your list of buildpacks, so it runs before your app is built:
 
-    $ heroku buildpacks:add -i 1 https://github.com/timshadel/heroku-buildpack-github-netrc.git
+    $ heroku buildpacks:add -i 1 https://github.com/mpdifran/heroku-buildpack-github-netrc.git
 
 Set your GitHub auth token:
 
@@ -75,7 +75,7 @@ $ git push heroku master  # push your changes to Heroku
 
 -----> Fetching custom git buildpack... done
 -----> Multipack app detected
-=====> Downloading Buildpack: https://github.com/timshadel/heroku-buildpack-github-netrc.git
+=====> Downloading Buildpack: https://github.com/mpdifran/heroku-buildpack-github-netrc.git
 =====> Detected Framework: github-netrc
        Generated .netrc & .curlrc files (available only at build-time)
        GitHub User:   my-read-only-user
